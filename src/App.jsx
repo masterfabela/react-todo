@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import './App.css';
 import Form from './components/Form';
 import TodoList from './components/TodoList';
-import Todo from './components/Todo';
 
 function App() {
 	const [inputText, setInputText] = useState('');
@@ -18,7 +17,7 @@ function App() {
 				setTodos={setTodos}
 				setInputText={setInputText}
 			></Form>
-			<TodoList todos={todos}></TodoList>
+			<TodoList setTodos={setTodos} todos={todos}></TodoList>
 		</div>
 	);
 }
